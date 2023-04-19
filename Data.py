@@ -1,81 +1,74 @@
-from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButلn
 
 
 class Data:
-    generate_single_button = [
-        InlineKeyboardButton("🔥 sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ 🔥", callback_data="generate")
+    generate_single_butلn = [
+        InlineKeyboardButلn( ❒ بدء استخراج الجلسة  ❒"", callback_data="generate")
     ]
 
-    home_buttons = [
-        generate_single_button,
-        [InlineKeyboardButton(text="🏠 ʀᴇᴛᴜʀɴ ʜᴏᴍᴇ 🏠", callback_data="home")],
+    home_butلns = [
+        generate_single_butلn,
+        [InlineKeyboardButلn(text="父 العودة إلى الصفحة الرئيسية", callback_data="home")],
     ]
 
-    generate_button = [generate_single_button]
+    generate_butلn = [generate_single_butلn]
 
-    buttons = [
-        generate_single_button,
+    butلns = [
+        generate_single_butلn,
         [
-            InlineKeyboardButton(
-                "✨ ᴏᴜʀ ᴏᴛʜᴇʀ ʙᴏᴛs ᴀɴᴅ sᴛᴀᴛᴜs ✨", url="https://t.me/Alexa_BotUpdates/77"
+            InlineKeyboardButلn(
+                "𝘴ꪮꪊ𝘳ᥴꫀ 𝓽ꫀρ𝓽ꫝꪮꪀ", url="https://t.me/Tepthon"
             )
         ],
         [
-            InlineKeyboardButton("🤔 ʜᴏᴡ ᴛᴏ ᴜsᴇ 🤔", callback_data="help"),
-            InlineKeyboardButton("🎪 ᴀʙᴏᴜᴛ 🎪", callback_data="about"),
+            InlineKeyboardButلn("كيفية استخدام البوت ?", callback_data="help"),
+            InlineKeyboardButلn("حـول  ❍", callback_data="about"),
         ],
-        [InlineKeyboardButton("💌 ᴏᴛʜᴇʀ ʙᴏᴛs 💌", url="https://t.me/Alexa_Help")],
+        [InlineKeyboardButلn("𝗗𝗘𝗩", url="https://t.me/PPF22")],
     ]
 
     START = """
-ʜᴇʏ {}
-ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {}
-ɪꜰ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴛʀᴜsᴛ ᴛʜɪs ʙᴏᴛ, 
-1) sᴛᴏᴘ ʀᴇᴀᴅɪɴɢ ᴛʜɪs ᴍᴇssᴀɢᴇ
-2) ᴅᴇʟᴇᴛᴇ ᴛʜɪs ᴄʜᴀᴛ
-sᴛɪʟʟ ʀᴇᴀᴅɪɴɢ?
-ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴛᴇʟᴇᴛʜᴏɴ sᴛʀɪɴɢ sᴇssɪᴏɴ. ᴜsᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs ᴛᴏ ʟᴇᴀʀɴ ᴍᴏʀᴇ !
-ʙʏ @Shayri_Music_Lovers ᴀɴᴅ @Alexa_BotUpdates
+أهلًا {} ♦
+ومرحبًا بك عزيزي {}
+هذا البوت مخصص لاستخراج الجلسات
+مثل: - البايروجرام ، التيرمكس
+من خلال إرسال الأيبي ايدي والأيبي هاش ورقم هاتفك والكود والتحقق بخطوتين إذا كنت مفعله
+𝗗𝗘𝗩 :- @PPF22
     """
 
     HELP = """
-✨ **ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs** ✨
+ **الأوامر المتاحة**
 
-/about - ᴀʙᴏᴜᴛ ᴛʜᴇ ʙᴏᴛ
-/help - ᴛʜɪs ᴍᴇssᴀɢᴇ
-/start - sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ
-/repo - ɢᴇᴛ ʀᴇᴘᴏ
-/generate - sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ
-/cancel - ᴄᴀɴᴄᴇʟ ᴛʜᴇ ᴘʀᴏᴄᴇss
-/restart - ᴄᴀɴᴄᴇʟ ᴛʜᴇ ᴘʀᴏᴄᴇss
+/about - لحول البوت
+/help - لمساعدتك
+/start - لبدء البوت 
+/repo - لإعطاء ريبو البوت
+/generate - لاستخراج الجلسات 
+/cancel - لإلغاء الاستخراج 
+/restart - لترسيت اليوت
 """
 
     # About Message
     ABOUT = """
-**ᴀʙᴏᴜᴛ ᴛʜɪs ʙᴏᴛ** 
+**حول البوت** 
 
-ᴀ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴛᴇʟᴇᴛʜᴏɴ sᴛʀɪɴɢ sᴇssɪᴏɴ ʙʏ @Alexa_BotUpdates
+هذا هو بوت استخراج كود تيرمكس وبايروجرام مقدم من @PPF22
 
-sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://github.com/TheTeamAlexa/Session_Robot)
-ғʀᴀᴍᴇᴡᴏʀᴋ : [ᴘʏʀᴏɢʀᴀᴍ](docs.pyrogram.org)
-ʟᴀɴɢᴜᴀɢᴇ : [ᴘʏᴛʜᴏɴ](www.python.org)
-ᴏᴡɴᴇʀ : @Jankari_Ki_Duniya
+قناة السورس : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/PPF22)
+لغة البرمجة : [ᴘʏʀᴏɢʀᴀᴍ](docs.pyrogram.org)
+اللغة : [ᴘʏᴛʜᴏɴ](www.python.org)
+𝗗𝗘𝗩 : @PPF22
     """
 
     # Repo Message
     REPO = """
 ━━━━━━━━━━━━━━━━━━━━━━━━
-💥 A ᴘᴏᴡᴇʀғᴜʟ ʙᴏᴛ
-ᴏғ ♻️ ᴅʀ ᴀsᴀᴅ ᴀʟɪ 🔥
-━━━━━━━━━━━━━━━━━
-ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ғᴏʀ ᴛɢ...
+💥 انا مشغل لكي أقوم باستخراج الجلسات 
 ┏━━━━━━━━━━━━━━━━━┓
-┣★ ᴄʀᴇᴀᴛᴇʀ [ᴀsᴀᴅ ᴀʟɪ](https://t.me/Dr_Asad_Ali)
-┣★ ʜᴇᴀʀᴛ ᴜs  [ʜᴇᴀʀᴛ ❤️](https://t.me/Give_Me_Heart)
-┣★ ʙᴏᴛ ᴜᴏᴅᴀᴛᴇs [ᴏᴜʀ ᴏᴛʜᴇʀ ʙᴏᴛs](https://t.me/TheTeamAlexa)
-┣★ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://github.com/TheTeamAlexa/Session_Robot)
-┣★ ɴᴇᴛᴡᴏʀᴋ [ʀᴏᴄᴋs](https://t.me/Shayri_Music_Lovers)
+┣★ لي . [✨](https://t.me/P17_12)
+┣★ 𝗗𝗘𝗩𝗦 : [اضغط هنا](https://t.me/PPF22)
+┣★ السورسس [𝘴ꪮꪊ𝘳ᥴꫀ 𝓽ꫀρ𝓽ꫝꪮꪀ](https://t.me/Tepthon)
 ┗━━━━━━━━━━━━━━━━━┛
 💞 
-IF HAVE ANY QUESTION THEN CONTACT » TO » MY » [OWNER] @Jankari_Ki_Duniya
+إذا كان لديك أي سؤال ، فاتصل » ل » لي » [𝗗𝗘𝗩] @PPF22
    """
