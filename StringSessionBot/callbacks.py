@@ -39,18 +39,18 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         await bot.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
-            text="**ʜᴇʀᴇ ɪs ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ**\n" + Data.HELP,
+            text="**كيف تستخدمني**\n" + Data.HELP,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
     elif query == "generate":
         await callback_query.message.reply(
-            "ᴘʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ᴛʜᴇ ᴘʏᴛʜᴏɴ ʟɪʙʀᴀʀʏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ꜰᴏʀ",
+            "يرجى اختيار الجلسة المطلوبة إذا كنت تريد جلسة بايروجرام اختر بايروجرام وإذا كنت تريد تليثون اختر تيرمكس",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🧑‍💻 ᴘʏʀᴏɢʀᴀᴍ", callback_data="pyrogram"),
-                        InlineKeyboardButton("ᴛᴇʟᴇᴛʜᴏɴ 🧑‍💻", callback_data="telethon"),
+                        InlineKeyboardButton("بايروجرام", callback_data="pyrogram"),
+                        InlineKeyboardButton("تليثون", callback_data="telethon"),
                     ]
                 ]
             ),
@@ -69,8 +69,8 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
 
 
 ERROR_MESSAGE = (
-    "ᴏᴏᴘs! ᴀɴ ᴇxᴄᴇᴘᴛɪᴏɴ ᴏᴄᴄᴜʀᴇᴅ! \n\n**ᴇʀʀᴏʀ** : {} "
-    "\n\nᴘʟᴇᴀsᴇ ᴠɪsɪᴛ @Alexa_BotUpdates ɪꜰ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴅᴏᴇsɴ'ᴛ ᴄᴏɴᴛᴀɪɴ ᴀɴʏ "
-    "sᴇɴsɪᴛɪᴠᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴀɴᴅ ʏᴏᴜ ɪꜰ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴘᴏʀᴛ ᴛʜɪs ᴀs "
-    "ᴛʜɪs ᴇʀʀᴏʀ ᴍᴇssᴀɢᴇ ɪs ɴᴏᴛ ʙᴇɪɴɢ ʟᴏɢɢᴇᴅ ʙʏ ᴜs!"
+    "اوبس هناك خطأ \n\n**خطأ** : {} "
+    "\n\nأرجو مراسلة @PPF22 قم بتحويل هذه الرسالة له "
+    "أو يمكنك إعادة استخراج الجلسة"
+    "وشكرًا لاستخدام البوت المقدم من : @Tepthon"
 )
