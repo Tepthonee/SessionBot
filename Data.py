@@ -1,30 +1,30 @@
-from pyrogram.types import InlineKeyboardButلn
+from pyrogram.types import InlineKeyboardButton
 
 
 class Data:
-    generate_single_butلn = [
+    generate_single_button = [
         InlineKeyboardButton("❒ بدء استخراج الجلسة  ❒", callback_data="generate")
     ]
 
-    home_butلns = [
-        generate_single_butلn,
-        [InlineKeyboardButلn(text="父 العودة إلى الصفحة الرئيسية", callback_data="home")],
+    home_buttons = [
+        generate_single_button,
+        [InlineKeyboardButton(text="父 العودة إلى الصفحة الرئيسية", callback_data="home")],
     ]
 
-    generate_butلn = [generate_single_butلn]
+    generate_button = [generate_single_button]
 
-    butلns = [
-        generate_single_butلn,
+    buttons = [
+        generate_single_button,
         [
-            InlineKeyboardButلn(
+            InlineKeyboardButton(
                 "𝘴ꪮꪊ𝘳ᥴꫀ 𝓽ꫀρ𝓽ꫝꪮꪀ", url="https://t.me/Tepthon"
             )
         ],
         [
-            InlineKeyboardButلn("كيفية استخدام البوت ?", callback_data="help"),
-            InlineKeyboardButلn("حـول  ❍", callback_data="about"),
+            InlineKeyboardButtonton("كيفية استخدام البوت ?", callback_data="help"),
+            InlineKeyboardButton("حـول  ❍", callback_data="about"),
         ],
-        [InlineKeyboardButلn("𝗗𝗘𝗩", url="https://t.me/PPF22")],
+        [InlineKeyboardButton("𝗗𝗘𝗩", url="https://t.me/PPF22")],
     ]
 
     START = """
@@ -54,7 +54,7 @@ class Data:
 
 هذا هو بوت استخراج كود تيرمكس وبايروجرام مقدم من @PPF22
 
-قناة السورس : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/PPF22)
+قناة السورس : [من هنا](https://t.me/Tepthon)
 لغة البرمجة : [ᴘʏʀᴏɢʀᴀᴍ](docs.pyrogram.org)
 اللغة : [ᴘʏᴛʜᴏɴ](www.python.org)
 𝗗𝗘𝗩 : @PPF22
