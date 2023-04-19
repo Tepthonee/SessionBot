@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButلn
 
 class Data:
     generate_single_butلn = [
-        InlineKeyboardButلn( ❒ بدء استخراج الجلسة  ❒"", callback_data="generate")
+        InlineKeyboardButton("❒ بدء استخراج الجلسة  ❒", callback_data="generate")
     ]
 
     home_butلns = [
@@ -70,5 +70,5 @@ class Data:
 ┣★ السورسس [𝘴ꪮꪊ𝘳ᥴꫀ 𝓽ꫀρ𝓽ꫝꪮꪀ](https://t.me/Tepthon)
 ┗━━━━━━━━━━━━━━━━━┛
 💞 
-إذا كان لديك أي سؤال ، فاتصل » ل » لي » [𝗗𝗘𝗩] @PPF22
+إذا كان لديك أي سؤال ، فراسل » ل » لي » [𝗗𝗘𝗩] @PPF22
    """
