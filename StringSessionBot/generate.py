@@ -98,7 +98,7 @@ async def generate_session(bot, msg, telethon=False):
     try:
         phone_code_msg = await bot.ask(
             user_id,
-            "أذهب إلى حساب التليجرام الرسمي وسوف يصلك كود قم بإدخاله بالصيغة الآتية  \nɪꜰ ᴏᴛᴘ ɪs `12345`, **مثال** `1 2 3 4 5`.",
+            "اذهب إلى حساب التليجرام الرسمي وسوف يصلك كود قم بإدخاله بالصيغة الآتية  \قم بإدخال الكود الخاص بك `12345`, **مثال** `1 2 https://t.me/TepthonSession/2 3 4 5`.",
             filters=filters.text,
             timeout=600,
         )
