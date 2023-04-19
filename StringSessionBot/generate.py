@@ -124,7 +124,7 @@ async def generate_session(bot, msg, telethon=False):
         return
     except (PhoneCodeExpired, PhoneCodeExpiredError):
         await msg.reply(
-            "ᴏᴛᴘ ɪs ᴇxᴘɪʀᴇᴅ. ᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "الكود الذي أدخلته خاطئ يرجى إعادة الإستخراج مرة أخرى",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
@@ -162,7 +162,7 @@ async def generate_session(bot, msg, telethon=False):
     else:
         string_session = await client.export_session_string()
     text = "**{} كود الجلسة** \n\n`{}` \n\مستخرج من @Tepthon".format(
-        "تليثون" if telethon  "بايروجرام", string_session
+"تليثون" if telethon else "بايروجرام", string_session
     )
     try:
         await client.send_message("me", text)
