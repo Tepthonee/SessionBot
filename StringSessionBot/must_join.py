@@ -19,14 +19,14 @@ async def must_join_channel(bot: Client, msg: Message):
                 link = chat_info.invite_link
             try:
                 await msg.reply(
-                    f"ʏᴏᴜ ᴍᴜsᴛ ᴊᴏɪɴ [ᴛʜɪs ᴄʜᴀɴɴᴇʟ]({link}) ᴛᴏ ᴜsᴇ ᴍᴇ. ᴀꜰᴛᴇʀ ᴊᴏɪɴɪɴɢ ᴛʀʏ ᴀɢᴀɪɴ!",
+                    f"❒ يجب عليك الإشتراك [في هذه القناة]({link}) وبعد ذلك أعد المحاولة مرة أخرى!",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup(
-                        [[InlineKeyboardButton("✨ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ✨", url=link)]]
+                        [[InlineKeyboardButton("سورس تيبثون - TEPTHON USERBOT", url=link)]]
                     ),
                 )
                 await msg.stop_propagation()
             except ChatWriteForbidden:
                 pass
     except ChatAdminRequired:
-        print(f"ɪ'ᴍ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ MUST_JOIN ᴄʜᴀᴛ : {MUST_JOIN} !")
+        print(f"أنا لست مشرف MUST_JOIN في القناة : {MUST_JOIN} !")
