@@ -25,12 +25,12 @@ from telethon.errors import (
 @Client.on_message(filters.private & ~filters.forwarded & filters.command("generate"))
 async def main(_, msg):
     await msg.reply(
-        "ᴘʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ᴛʜᴇ ᴘʏᴛʜᴏɴ ʟɪʙʀᴀʀʏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ꜰᴏʀ",
+        "اختر الجلسة المراد استخراجها من الأسفل ",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🧑‍💻 ᴘʏʀᴏɢʀᴀᴍ", callback_data="pyrogram"),
-                    InlineKeyboardButton("ᴛᴇʟᴇᴛʜᴏɴ 🧑‍💻", callback_data="telethon"),
+                    InlineKeyboardButton("بايروجرام ❍", callback_data="pyrogram"),
+                    InlineKeyboardButton("تليثون ❍", callback_data="telethon"),
                 ]
             ]
         ),
@@ -39,13 +39,13 @@ async def main(_, msg):
 
 async def generate_session(bot, msg, telethon=False):
     await msg.reply(
-        "sᴛᴀʀᴛɪɴʜ {} sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛɪᴏɴ...".format(
+        "تم بدء  {} استخراج الجلسة...".format(
             "Telethon" if telethon else "Pyrogram"
         )
     )
     user_id = msg.chat.id
     api_id_msg = await bot.ask(
-        user_id, "ᴘʟᴇᴀsᴇ sᴇɴᴅ ʏᴏᴜʀ `API_ID`", filters=filters.text
+        user_id, "أرسل الآن الخاص بك `API_ID`", filters=filters.text
     )
     if await cancelled(api_id_msg):
         return
@@ -53,26 +53,26 @@ async def generate_session(bot, msg, telethon=False):
         api_id = int(api_id_msg.text)
     except ValueError:
         await api_id_msg.reply(
-            "ɴᴏᴛ ᴀ ᴠᴀʟɪᴅ API_ID (ᴡʜɪᴄʜ ᴍᴜsᴛ ʙᴇ ᴀɴ ɪɴᴛᴇɢᴇʀ). ᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "غير صالحAPI_ID(أعد المحاولة).  الخاص بك غير صالح حاول مرة أخرى.",
             quote=True,
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
     api_hash_msg = await bot.ask(
-        user_id, "ᴘʟᴇᴀsᴇ sᴇɴᴅ ʏᴏᴜʀ `API_HASH`", filters=filters.text
+        user_id, "أرسل الآن الخاص بك `API_HASH`", filters=filters.text
     )
     if await cancelled(api_id_msg):
         return
     api_hash = api_hash_msg.text
     phone_number_msg = await bot.ask(
         user_id,
-        "ɴᴏᴡ ᴘʟᴇᴀsᴇ sᴇɴᴅ ʏᴏᴜʀ `ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ` ᴀʟᴏɴɢ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ. \nᴇxᴀᴍᴘʟᴇ : `+19876543210`",
+        "الآن أرسل رقم الهاتف الخاص بك`ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ` قم بكتابة رقم مع رمز بلدك. \nمثال : `+96279654210`",
         filters=filters.text,
     )
     if await cancelled(api_id_msg):
         return
     phone_number = phone_number_msg.text
-    await msg.reply("sᴇɴᴅɪɴɢ ᴏᴛᴘ...")
+    await msg.reply("جاري إرسال الكود انتظر قليلًا لطفًا ♥️...")
     if telethon:
         client = TelegramClient(StringSession(), api_id, api_hash)
     else:
@@ -85,20 +85,20 @@ async def generate_session(bot, msg, telethon=False):
             code = await client.send_code(phone_number)
     except (ApiIdInvalid, ApiIdInvalidError):
         await msg.reply(
-            "`API_ID` ᴀɴᴅ `API_HASH` ᴄᴏᴍʙɪɴᴀᴛɪᴏɴ ɪs ɪɴᴠᴀʟɪᴅ. ᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "`API_ID` و `API_HASH` الايبيات الخاصة بك غير صحيحة يرجى إعادة الاستخراج مرة أخرى.",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
     except (PhoneNumberInvalid, PhoneNumberInvalidError):
         await msg.reply(
-            "`PHONE_NUMBER` ɪs ɪɴᴠᴀʟɪᴅ. ᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "`PHONE_NUMBER` رقم الهاتف الخاص بك غير صحيح يرجى إعادة الاستخراج مرة أخرى ",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
     try:
         phone_code_msg = await bot.ask(
             user_id,
-            "ᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ꜰᴏʀ ᴀɴ ᴏᴛᴘ ɪɴ ᴏꜰꜰɪᴄɪᴀʟ ᴛᴇʟᴇɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ. ɪꜰ ʏᴏᴜ ɢᴏᴛ ɪᴛ, sᴇɴᴅ ᴏᴛᴘ ʜᴇʀᴇ ᴀꜰᴛᴇʀ ʀᴇᴀᴅɪɴɢ ᴛʜᴇ ʙᴇʟᴏᴡ ꜰᴏʀᴍᴀᴛ. \nɪꜰ ᴏᴛᴘ ɪs `12345`, **ᴘʟᴇᴀsᴇ sᴇɴᴅ ɪᴛ ᴀs** `1 2 3 4 5`.",
+            "أذهب إلى حساب التليجرام الرسمي وسوف يصلك كود قم بإدخاله بالصيغة الآتية  \nɪꜰ ᴏᴛᴘ ɪs `12345`, **مثال** `1 2 3 4 5`.",
             filters=filters.text,
             timeout=600,
         )
@@ -106,7 +106,7 @@ async def generate_session(bot, msg, telethon=False):
             return
     except TimeoutError:
         await msg.reply(
-            "ᴛɪᴍᴇ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ᴏꜰ 10 ᴍɪɴᴜᴛᴇs. ᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "لقد تجاوزت الحد الزمني 10 دقائق أعد استخراج الجلسة مرة أخرى.",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
@@ -118,7 +118,7 @@ async def generate_session(bot, msg, telethon=False):
             await client.sign_in(phone_number, code.phone_code_hash, phone_code)
     except (PhoneCodeInvalid, PhoneCodeInvalidError):
         await msg.reply(
-            "ᴏᴛᴘ ɪs ɪɴᴠᴀʟɪᴅ. ᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            " رقم الهاتف الخاص بك غير صحيح يرجى إعادة الاستخراج مرة أخرى ",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
@@ -132,13 +132,13 @@ async def generate_session(bot, msg, telethon=False):
         try:
             two_step_msg = await bot.ask(
                 user_id,
-                "ʏᴏᴜʀ ᴀᴄᴄᴏᴜɴᴛ ʜᴀs ᴇɴᴀʙʟᴇᴅ ᴛᴡᴏ-sᴛᴇᴘ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ. ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛʜᴇ ᴘᴀssᴡᴏʀᴅ.",
+                "التحقق بخطوتين مفعل بحسابك لذا قم بإدخاله هنا لطفًا.",
                 filters=filters.text,
                 timeout=300,
             )
         except TimeoutError:
             await msg.reply(
-                "ᴛɪᴍᴇ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ᴏꜰ 5 ᴍɪɴᴜᴛᴇs. ᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+                "لقد تجاوزت المدة الزمنية يجب عليك إعادة استخراج الجلسة مرة أخرى",
                 reply_markup=InlineKeyboardMarkup(Data.generate_button),
             )
             return
@@ -152,7 +152,7 @@ async def generate_session(bot, msg, telethon=False):
                 return
         except (PasswordHashInvalid, PasswordHashInvalidError):
             await two_step_msg.reply(
-                "ɪɴᴠᴀʟɪᴅ ᴘᴀssᴡᴏʀᴅ ᴘʀᴏᴠɪᴅᴇᴅ. ᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+                "التحقق بخطوتين الذي ادخلته خطأ يرجى إعادة الاستخراج مرة أخرى 🤍.",
                 quote=True,
                 reply_markup=InlineKeyboardMarkup(Data.generate_button),
             )
@@ -161,8 +161,8 @@ async def generate_session(bot, msg, telethon=False):
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = "**{} sᴛʀɪɴɢ sᴇssɪᴏɴ** \n\n`{}` \n\ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ @Alexa_Help".format(
-        "ᴛᴇʟᴇᴛʜᴏɴ" if telethon else "ᴘʏʀᴏɢʀᴀᴍ", string_session
+    text = "**{} كود الجلسة** \n\n`{}` \n\مستخرج من @Tepthon".format(
+        "تليثون" if telethon  "بايروجرام", string_session
     )
     try:
         await client.send_message("me", text)
@@ -170,7 +170,7 @@ async def generate_session(bot, msg, telethon=False):
         pass
     await client.disconnect()
     await phone_code_msg.reply(
-        "sᴜᴄᴄᴇssꜰᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ {} sᴛʀɪɴɢ sᴇssɪᴏɴ. \n\nᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs! \n\nʙʏ @TheTeamAlexa".format(
+        "تم استخراج {} الجلسة. \n\nيرجى تفحص الرسائل المحفوظة! \n\nمن @Tepthon".format(
             "telethon" if telethon else "pyrogram"
         )
     )
@@ -179,20 +179,20 @@ async def generate_session(bot, msg, telethon=False):
 async def cancelled(msg):
     if "/cancel" in msg.text:
         await msg.reply(
-            "ᴄᴀɴᴄᴇʟ ᴛʜᴇ ᴘʀᴏᴄᴇss!",
+            "تم إلغاء استخراج الجلسة!",
             quote=True,
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return True
     elif "/restart" in msg.text:
         await msg.reply(
-            "ʙᴏᴛ ɪs ʀᴇsᴛᴀʀᴛᴇᴅ!",
+            "تم ترسيت البوت!",
             quote=True,
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return True
     elif msg.text.startswith("/"):  # Bot Commands
-        await msg.reply("ᴄᴀɴᴄᴇʟʟᴇᴅ ᴛʜᴇ ɢᴇɴᴇʀᴀᴛɪᴏɴ ᴘʀᴏᴄᴇss!", quote=True)
+        await msg.reply("تم إلغاؤه!", quote=True)
         return True
     else:
-        return False
+        return False 
