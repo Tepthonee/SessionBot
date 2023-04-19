@@ -21,7 +21,7 @@ class Data:
             )
         ],
         [
-            InlineKeyboardButtonton("كيفية استخدام البوت ?", callback_data="help"),
+            InlineKeyboardButton("كيفية استخدام البوت ?", callback_data="help"),
             InlineKeyboardButton("حـول  ❍", callback_data="about"),
         ],
         [InlineKeyboardButton("𝗗𝗘𝗩", url="https://t.me/PPF22")],
@@ -54,7 +54,7 @@ class Data:
 
 هذا هو بوت استخراج كود تيرمكس وبايروجرام مقدم من @PPF22
 
-قناة السورس : [من هنا](https://t.me/Tepthon)
+قناة السورس : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/PPF22)
 لغة البرمجة : [ᴘʏʀᴏɢʀᴀᴍ](docs.pyrogram.org)
 اللغة : [ᴘʏᴛʜᴏɴ](www.python.org)
 𝗗𝗘𝗩 : @PPF22
