@@ -3,12 +3,12 @@ from pyrogram.types import InlineKeyboardButton
 
 class Data:
     generate_single_button = [
-        InlineKeyboardButton("❒ بدء استخراج الجلسة  ❒", callback_data="generate")
+        InlineKeyboardButton("بـدأ اسـتـخـراج الـجــلـسـة", callback_data="generate")
     ]
 
     home_buttons = [
         generate_single_button,
-        [InlineKeyboardButton(text="父 العودة إلى الصفحة الرئيسية", callback_data="home")],
+        [InlineKeyboardButton(text="رجـوع 🔙", callback_data="home")],
     ]
 
     generate_button = [generate_single_button]
@@ -17,14 +17,14 @@ class Data:
         generate_single_button,
         [
             InlineKeyboardButton(
-                "𝘴ꪮꪊ𝘳ᥴꫀ 𝓽ꫀρ𝓽ꫝꪮꪀ", url="https://t.me/Tepthon"
+                "سـورس تـيـبثون الـعـربي", url="https://t.me/Tepthon"
             )
         ],
         [
             InlineKeyboardButton("كيفية استخدام البوت ?", callback_data="help"),
             InlineKeyboardButton("حـول  ❍", callback_data="about"),
         ],
-        [InlineKeyboardButton("𝗗𝗘𝗩", url="https://t.me/PPF22")],
+        [InlineKeyboardButton("المطـور", url="https://t.me/e_2_d")],
     ]
 
     START = """
@@ -57,7 +57,7 @@ class Data:
 قناة السورس : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/Tepthon)
 لغة البرمجة : [ᴘʏʀᴏɢʀᴀᴍ](docs.pyrogram.org)
 اللغة : [ᴘʏᴛʜᴏɴ](www.python.org)
-𝗗𝗘𝗩 : @PPF22
+𝗗𝗘𝗩 : @e_2_d
     """
 
     # Repo Message
@@ -66,9 +66,9 @@ class Data:
 💥 أنا مشغل لكي أقوم باستخراج الجلسات 
 ┏━━━━━━━━━━━━━━━━━┓
 ┣★ My . [✨](https://t.me/P17_12)
-┣★ 𝗗𝗘𝗩𝗦 : [اضغط هنا](https://t.me/PPF22)
+┣★ 𝗗𝗘𝗩 : [اضغط هنا](https://t.me/e_2_d)
 ┣★ السورس [𝘴ꪮꪊ𝘳ᥴꫀ 𝓽ꫀρ𝓽ꫝꪮꪀ](https://t.me/Tepthon)
 ┗━━━━━━━━━━━━━━━━━┛
 💞 
-إذا كان لديك أي سؤال ، فراسل » المطور » [𝗗𝗘𝗩] @PPF22
+إذا كان لديك أي سؤال ، فراسل » المطور » [𝗗𝗘𝗩] @e_2_d
    """
