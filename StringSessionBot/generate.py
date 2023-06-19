@@ -53,7 +53,7 @@ async def generate_session(bot, msg, telethon=False):
         api_id = int(api_id_msg.text)
     except ValueError:
         await api_id_msg.reply(
-            "غيـࢪ صاެݪحAPI_ID(أعــد اެݪمحأولة).  اެݪخاص بـك غيـࢪ صاެݪح حأول مـࢪة أخـࢪى.",
+            "غيـࢪ صالـحAPI_ID(أعــد اެݪمـحاولـة).  اެݪخاص بـك غيـࢪ صالـح حـاول مـࢪة أخـࢪى.",
             quote=True,
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
@@ -66,7 +66,7 @@ async def generate_session(bot, msg, telethon=False):
     api_hash = api_hash_msg.text
     phone_number_msg = await bot.ask(
         user_id,
-        "اެݪآن أࢪسـل ࢪقم اެݪهاتف اެݪخاص بـك`ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ` قم بـكتابة ࢪقم مع ࢪمز بلدك. \nمثاެݪ : `+96279654210`",
+        "اެݪآن أࢪسـل ࢪقم اެݪهاتف اެݪخاص بـك`ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ` قم بـكتابة ࢪقم مع ࢪمز بلدك. \nمـثـال : `+96279654210`",
         filters=filters.text,
     )
     if await cancelled(api_id_msg):
@@ -101,7 +101,7 @@ async def generate_session(bot, msg, telethon=False):
             return
     except TimeoutError:
         await msg.reply(
-            "لقد تجأوزت اެݪحد اެݪزمني 10 دقائق أعــد استـخـࢪاج اެݪجـلسة مـࢪة أخـࢪى.",
+            "لقد تـجاوزت اެݪحد اެݪزمني 10 دقائق أعــد استـخـࢪاج اެݪجـلسة مـࢪة أخـࢪى.",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
@@ -133,7 +133,7 @@ async def generate_session(bot, msg, telethon=False):
             )
         except TimeoutError:
             await msg.reply(
-                "لقد تجأوزت اެݪمدة اެݪزمنية يـجـب عـليك إعـادة استـخـࢪاج اެݪجـلسة مـࢪة أخـࢪى",
+                "لقد تـجاوزت اެݪمدة اެݪزمنية يـجـب عـليك إعـادة استـخـࢪاج اެݪجـلسة مـࢪة أخـࢪى",
                 reply_markup=InlineKeyboardMarkup(Data.generate_button),
             )
             return
