@@ -3,12 +3,12 @@ from pyrogram.types import InlineKeyboardButton
 
 class Data:
     generate_single_button = [
-        InlineKeyboardButton("بـدأ استـخـࢪاج اެݪجـلسة", callback_data="generate")
+        InlineKeyboardButton("بـدأ استـخـراج الجـلسة", callback_data="generate")
     ]
 
     home_buttons = [
         generate_single_button,
-        [InlineKeyboardButton(text="ࢪجـوع 🔙", callback_data="home")],
+        [InlineKeyboardButton(text="رجـوع 🔙", callback_data="home")],
     ]
 
     generate_button = [generate_single_button]
@@ -24,7 +24,7 @@ class Data:
             InlineKeyboardButton("- كيـفـية اެݪاستـخـدام", callback_data="help"),
             InlineKeyboardButton("- حـول", callback_data="about"),
         ],
-        [InlineKeyboardButton("المطـوࢪ", url="https://t.me/S_4_N")],
+        [InlineKeyboardButton("المطـور", url="https://t.me/S_4_N")],
     ]
 
     START = """
@@ -53,10 +53,10 @@ class Data:
 
 مـࢪحبـًا عـزيـزي أنا هـنا لاسـتـخࢪاج الجـلـسات بـࢪمـجـة المطـوࢪ @S_4_N
 
-قناة السوࢪس : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/Tepthon)
-لغة البࢪمجة : [ᴘʏʀᴏɢʀᴀᴍ](docs.pyrogram.org)
-اللغة : [ᴘʏᴛʜᴏɴ](www.python.org)
-اެݪمـبرمـج : @S_4_N
+قناة السوࢪس : [𝗦𝗼𝘂𝗿𝗰𝗲 𝗧𝗲𝗽𝘁𝗵𝗼𝗻](https://t.me/Tepthon)
+لغة البـرمـجـة : [بـايروجرام](docs.pyrogram.org)
+اللغة : [بايثون](www.python.org)
+المـطـور : @S_4_N
     """
 
     # Repo Message
@@ -64,10 +64,10 @@ class Data:
 ━━━━━━━━━━━━━━━━━━━━━━━━
 صـل على النبي 🤍  
 ┏━━━━━━━━━━━━━━━━━┓
-┣★ My . [✨](https://t.me/P17_12)
-┣★ 𝗗𝗘𝗩 : [اضغط هنا](https://t.me/S_4_N)
-┣★ السوࢪس [𝘴ꪮꪊ𝘳ᥴꫀ 𝓽ꫀρ𝓽ꫝꪮꪀ](https://t.me/Tepthon)
+┣★ معلومات عن مطـوري . [✨](https://t.me/P17_12)
+┣★ الـمطور : [اضغط هنا](https://t.me/S_4_N)
+┣★ السـورس [𝗦𝗼𝘂𝗿𝗰𝗲 𝗧𝗲𝗽𝘁𝗵𝗼𝗻](https://t.me/Tepthon)
 ┗━━━━━━━━━━━━━━━━━┛
 💞 
-إذا كان لديك أي سؤال ، فࢪاسل » المطوࢪ » [𝗗𝗘𝗩] @S_4_N
+إذا كان لديك أي سؤال ، فࢪاسل » المطوࢪ » [المـطور] @S_4_N
    """
