@@ -39,13 +39,13 @@ async def main(_, msg):
 
 async def generate_session(bot, msg, telethon=False):
     await msg.reply(
-        "تـم بدء  {} استـخـراج الجـلسة...".format(
+        "**- استخـراج كـود {}  تـليثـون بواسطـة 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 جـارٍ...**".format(
             "Telethon" if telethon else "Pyrogram"
         )
     )
     user_id = msg.chat.id
     api_id_msg = await bot.ask(
-        user_id, "أرسـل الآن الخاص بـك `API_ID`", filters=filters.text
+        user_id, "**⎆ أرسـل الأيبـي أيـدي الخـاص بـك ...**", filters=filters.text
     )
     if await cancelled(api_id_msg):
         return
@@ -53,26 +53,26 @@ async def generate_session(bot, msg, telethon=False):
         api_id = int(api_id_msg.text)
     except ValueError:
         await api_id_msg.reply(
-            "غيـر صالـحAPI_ID(أعــد المـحاولـة).  الخاص بـك غيـر صالـح حـاول مـرة أخـرى.",
+            "**⎆ الأيبـي أيـدي الـذي أرسلتــه غيـر صالـح إعـادة المحاولـة مـرة أخـرى!!!**",
             quote=True,
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
     api_hash_msg = await bot.ask(
-        user_id, "أرسـل الآن الخاص بـك `API_HASH`", filters=filters.text
+        user_id, "**⎆ أرسـل الأيبـي هـاش الخـاص بـك ...**", filters=filters.text
     )
     if await cancelled(api_id_msg):
         return
     api_hash = api_hash_msg.text
     phone_number_msg = await bot.ask(
         user_id,
-        "الآن أرسـل رقم الهاتف الخاص بـك`ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ` قم بـكتابة رقم مع رمز بلدك. \nمـثـال : `+96279654210`",
+        "الآن أرسـل رقم الهاتف الخاص بـك`ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ` قم بـكتابة رقم مـع رمـز بلـدك 📱. \n**مثـال** : `+96279654210`",
         filters=filters.text,
     )
     if await cancelled(api_id_msg):
         return
     phone_number = phone_number_msg.text
-    await msg.reply("جـاري إرسـال الكـود إلــى حـسابـك انتـظر قـليـلًا......")
+    await msg.reply("**⎆ جـاري إرسـال الكـود إلــى حـسابـك انتـظر قـليـلًا......**")
     if telethon:
         client = TelegramClient(StringSession(), api_id, api_hash)
     else:
