@@ -25,7 +25,7 @@ from telethon.errors import (
 @Client.on_message(filters.private & ~filters.forwarded & filters.command("generate"))
 async def main(_, msg):
     await msg.reply(
-        "مـرحبـًا بـك عـزيـزي مـرة أخـرى قـم بـاختـيـار الجـلـسـة المـىاد اسـتـخراجـها",
+        "مـرحبـًا بـك عـزيـزي مـرة أخـرى قـم بـاختـيـار الجـلـسـة المـىاد اسـتـخراجـها 🖥️",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
