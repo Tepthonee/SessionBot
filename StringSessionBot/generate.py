@@ -39,8 +39,8 @@ async def main(_, msg):
 
 async def generate_session(bot, msg, telethon=False):
     await msg.reply(
-        "**- استخـراج كـود {}  تـليثـون بواسطـة 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 جـارٍ...**".format(
-            "Telethon" if telethon else "Pyrogram"
+        "**- استخـراج كـود {} بواسطـة 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 جـارٍ...**".format(
+            "تيرمكـس" if telethon else "بايروجـرام"
         )
     )
     user_id = msg.chat.id
