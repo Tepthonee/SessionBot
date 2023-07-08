@@ -91,7 +91,7 @@ async def generate_session(bot, msg, telethon=False):
         return
     except (PhoneNumberInvalid, PhoneNumberInvalidError):
         await msg.reply(
-            "**⎆ رقـم الهـاتف الخـاص بـك غيـر صحيـح يرجـى إعـادة المحاولـة .**"
+            "**⎆ رقـم الهـاتف الخـاص بـك غيـر صحيـح يرجـى إعـادة المحاولـة .**",
             reply_markup=InlineKeyboardMarkup(Data.generate_button),
         )
         return
