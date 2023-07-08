@@ -66,7 +66,7 @@ async def generate_session(bot, msg, telethon=False):
     api_hash = api_hash_msg.text
     phone_number_msg = await bot.ask(
         user_id,
-        "**⎆ يـرجـى إرسـال رقـم الهـاتف مـع رمـز الدولـة 📱/n مثـال : +96272848420**"
+        "**⎆ يـرجـى إرسـال رقـم الهـاتف مـع رمـز الدولـة 📱\n مثـال : +96272848420**"
         filters=filters.text,
     )
     if await cancelled(api_id_msg):
