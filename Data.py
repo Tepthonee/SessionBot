@@ -24,7 +24,7 @@ class Data:
             InlineKeyboardButton("كيفيـة الاستـخدام   ⍰ ", callback_data="help"),
             InlineKeyboardButton("حـول البـوت ℹ️", callback_data="about"),
         ],
-        [InlineKeyboardButton("المطـور 👷", url="https://t.me/PPF22")],
+        [InlineKeyboardButton("المطـور 👷", url="https://t.me/H_E_5")],
     ]
 
     START = """
@@ -55,12 +55,12 @@ class Data:
     ABOUT = """
 **حـول البـوت ⍰**
 
-هـذا البوت تـم تشـغيله بواسطـة 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 و المـطور @PPF22
+هـذا البوت تـم تشـغيله بواسطـة 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 و المـطور @H_E_5
 
 قنـاة السـورس 🖥️ : [𝗦𝗼𝘂𝗿𝗰𝗲 𝗧𝗲𝗽𝘁𝗵𝗼𝗻](https://t.me/Tepthon)
 لغـة البرمجـة ℹ️ : [بـايروجرام](docs.pyrogram.org)
 اللغـة 🌐 : [بايثون](www.python.org)
-المـطور 👷 : @PPF22
+المـطور 👷 : @H_E_5
     """
 
     # Repo Message
@@ -70,7 +70,7 @@ class Data:
 لا تنسـى الصـلاة على النبي 🤍 .
 ┏━━━━━━━━━━━━━━━━━┓
 ⎆ سـورس تيبـثون - 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 . [اضـغط هـنا ❗](https://t.me/Tepthon)
-⎆ المطـور : [اضـغط هـنا ❗](https://t.me/PPF22)
+⎆ المطـور : [اضـغط هـنا ❗](https://t.me/H_E_5)
 ⎆ شـروحـات السـورس ℹ️ [اضـغط هـنا ❗](https://t.me/Tepthon)
 ┗━━━━━━━━━━━━━━━━━┛ 
 تابـع لـ - 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 🌐
