@@ -69,7 +69,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
 
 
 ERROR_MESSAGE = (
-    "اوبس هناك خطأ \n\n**خطأ** : {} "
+    "عـذرًا هناك خطأ \n\n**خطأ** : {} "
     "\n\nأرجو مراسلة @H_E_5 قم بتحويل هذه الرسالة له "
     "أو يمكنك إعادة استخراج الجلسة"
     "وشكرًا لاستخدام البوت المقدم من : @Tepthon"
