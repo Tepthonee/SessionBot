@@ -25,7 +25,7 @@ from telethon.errors import (
 @Client.on_message(filters.private & ~filters.forwarded & filters.command("generate"))
 async def main(_, msg):
     await msg.reply(
-        "مـرحبـًا بـك عزيـزي مـرة أخـرى يرجـى اختيـار الجلسـة المطلوبـة إذا كنـت تريـد تيرمكـس فاختـر تيرمكـس أمـا إذا كنـت تريـد بايروجـرام فاختـر بايروجـرام 🖥️",
+        "**مـرحبـًا بـك عزيـزي مـرة أخـرى يرجـى اختيـار الجلسـة المطلوبـة إذا كنـت تريـد تيرمكـس فاختـر تيرمكـس أمـا إذا كنـت تريـد بايروجـرام فاختـر بايروجـرام 🖥️**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -156,7 +156,7 @@ async def generate_session(bot, msg, telethon=False):
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = "**{} كـود الجـلسة** \n\n`{}` \nمستخـرج مـن 💡 @Tepthon".format(
+    text = "**{} كـود الجلسـة ⇣** \n\n`{}` \nمستخـرج مـن 💡 @Tepthon".format(
 "تليثون" if telethon else "بايروجرام", string_session
     )
     try:
