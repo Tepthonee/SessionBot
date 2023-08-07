@@ -29,8 +29,8 @@ async def main(_, msg):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("بايروجـرام", callback_data="pyrogram"),
-                    InlineKeyboardButton("تيرمكـس", callback_data="telethon"),
+                    InlineKeyboardButton("بايروجـرام - 𝐩𝐲𝐫𝐨𝐠𝐫𝐚𝐦", callback_data="pyrogram"),
+                    InlineKeyboardButton("تيرمكـس - 𝐭𝐞𝐫𝐦𝐮𝐱", callback_data="telethon"),
                 ]
             ]
         ),
@@ -157,7 +157,7 @@ async def generate_session(bot, msg, telethon=False):
     else:
         string_session = await client.export_session_string()
     text = "**{} كـود الجلسـة ⇣** \n\n`{}` \nمستخـرج مـن 💡 @Tepthon".format(
-"تليثون" if telethon else "بايروجرام", string_session
+"تليثون" if telethon else "بايروجـرام", string_session
     )
     try:
         await client.send_message("me", text)
