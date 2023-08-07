@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton
 
 class Data:
         reply_markup=InlineKeyboardMarkup(
-            [
+            (
                     InlineKeyboardButton(text="- بـدء استـخراج الجلسـة .", callback_data="generate")
                 ],
                     InlineKeyboardButton("- قنـاة السـورس", url="https://t.me/Tepthon"),
