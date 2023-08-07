@@ -18,8 +18,6 @@ class Data:
         [
         InlineKeyboardButton(
             "قنـاة السـورس", url="https://t.me/Tepthon"
-        ],
-        
     ]
 
     START = """
