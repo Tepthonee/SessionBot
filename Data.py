@@ -3,7 +3,12 @@ from pyrogram.types import InlineKeyboardButton
 
 class Data:
     generate_single_button = [
-        InlineKeyboardButton("- بـدء استخـراج الجلسـة .", callback_data="generate")
+        InlineKeyboardButton("بـدء استـخراج الجلسـة 🖥️", callback_data="generate")
+    ]
+
+    home_buttons = [
+        generate_single_button,
+        [InlineKeyboardButton(text="رجـوع 🔙", callback_data="home")],
     ]
 
     generate_button = [generate_single_button]
@@ -12,10 +17,14 @@ class Data:
         generate_single_button,
         [
             InlineKeyboardButton(
-                "- قنـاة السـورس .", url="https://t.me/Tepthon"
+                "𝗧𝗲𝗽𝘁𝗵𝗼𝗻 - سـورس تيبـثون 🌐", url="https://t.me/Tepthon"
             )
         ],
-        [InlineKeyboardButton("- المطـور .", url="https://t.me/A_D_P")],
+        [
+            InlineKeyboardButton("كيفيـة الاستـخدام   ⍰ ", callback_data="help"),
+            InlineKeyboardButton("حـول البـوت ℹ️", callback_data="about"),
+        ],
+        [InlineKeyboardButton("المطـور 👷", url="https://t.me/A_D_P")],
     ]
 
     START = """
