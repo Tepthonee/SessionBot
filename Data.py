@@ -2,13 +2,22 @@ from pyrogram.types import InlineKeyboardButton
 
 
 class Data:
-        reply_markup=InlineKeyboardMarkup(
-            (
-                    InlineKeyboardButton(text="- بـدء استـخراج الجلسـة .", callback_data="generate")
-                ],
-                    InlineKeyboardButton("- قنـاة السـورس", url="https://t.me/Tepthon"),
-                    InlineKeyboardButton("- المطـور", url="https://t.me/A_D_P")
-                ]
+    generate_single_button = [
+        InlineKeyboardButton("- بـدء استخـراج الجلسـة .", callback_data="generate")
+    ]
+
+    generate_button = [generate_single_button]
+
+    buttons = [
+        generate_single_button,
+        [
+            InlineKeyboardButton(
+                "- قنـاة السـورس .", url="https://t.me/Tepthon"
+            )
+        ],
+        [
+        [InlineKeyboardButton("- المطـور .", url="https://t.me/A_D_P")],
+    ]
 
     START = """
 **⎆ مـرحبـًا** {}
@@ -53,3 +62,4 @@ class Data:
 ┗━━━━━━━━━━━━━━━━━┛ 
 **تابـع لـ - 𝗧𝗲𝗽𝘁𝗵𝗼𝗻 🌐**
    """
+   
