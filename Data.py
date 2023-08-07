@@ -4,18 +4,11 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
         reply_markup=InlineKeyboardMarkup(
             [
-                [
                     InlineKeyboardButton(text="- بـدء استـخراج الجلسـة .", callback_data="generate")
                 ],
-                [
                     InlineKeyboardButton("- قنـاة السـورس", url="https://t.me/Tepthon"),
-                    InlineKeyboardButton("- المطـور .", url="https://t.me/A_D_P")
+                    InlineKeyboardButton("- المطـور", url="https://t.me/A_D_P")
                 ]
-            ]
-        ),
-        disable_web_page_preview=True,
-    )
-
 
     START = """
 **⎆ مـرحبـًا** {}
