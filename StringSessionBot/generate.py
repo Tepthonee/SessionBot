@@ -147,7 +147,7 @@ async def generate_session(bot, msg, telethon=False):
                 return
         except (PasswordHashInvalid, PasswordHashInvalidError):
             await two_step_msg.reply(
-                "التـحـقق بـخـطوتيـن الـذي أدخـلـته خطــأ يرجـى إعـادة الاستـخـراج مـرة أخـرى 🤍.",
+                "⎆ التحقـق بخطوتيـن الذي أدخلتـه خاطـئ يرجـى إعـادة استخراج الجلسـة ...",
                 quote=True,
                 reply_markup=InlineKeyboardMarkup(Data.generate_button),
             )
@@ -157,7 +157,7 @@ async def generate_session(bot, msg, telethon=False):
     else:
         string_session = await client.export_session_string()
     text = "**{} كـود الجلسـة ⇣** \n\n`{}` \nمستخـرج مـن 💡 @Tepthon".format(
-"تليثون" if telethon else "بايروجـرام", string_session
+"تيرمكـس - 𝐭𝐞𝐫𝐦𝐮𝐱" if telethon else "بايروجـرام - 𝐩𝐲𝐫𝐨𝐠𝐫𝐚𝐦", string_session
     )
     try:
         await client.send_message("me", text)
