@@ -3,18 +3,20 @@ from pyrogram.types import InlineKeyboardButton
 
 class Data:
     generate_single_button = [
-         [InlineKeyboardButton("بـدء إنشـاء جلسـة البـوت", callback_data="generate")],
+         [InlineKeyboardButton("بـدء انشـاء جلسـة البـوت", callback_data="generate")],
         [InlineKeyboardButton(text=" رجــوع ", callback_data="home")]
     ]
 
     generate_button = [
-        [InlineKeyboardButton("بـدء إنشـاء جلسـة البـوت", callback_data="generate")]
+        [InlineKeyboardButton("بـدء انشـاء جلسـة البـوت", callback_data="generate")]
     ]
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("بـدء إنشـاء جلسـة البـوت", callback_data="generate")],
+        [InlineKeyboardButton("بـدء انشـاء جلسـة البـوت", callback_data="generate")],
         
+        [
+            "قنـاة السـورس", url="https://t.me/Tepthon"
         ],
         
     ]
