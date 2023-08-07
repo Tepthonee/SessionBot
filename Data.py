@@ -15,7 +15,6 @@ class Data:
                 "- قنـاة السـورس .", url="https://t.me/Tepthon"
             )
         ],
-        [
         [InlineKeyboardButton("- المطـور .", url="https://t.me/A_D_P")],
     ]
 
