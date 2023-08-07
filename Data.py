@@ -4,7 +4,6 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     generate_single_button = [
                    InlineKeyboardButton(text="- بـدء استخـراج الجلسـة .", callback_data="generate")
-                ],
                 [
                     InlineKeyboardButton("قنـاة السـورس", url="https://t.me/Tepthon"),
                 ]
