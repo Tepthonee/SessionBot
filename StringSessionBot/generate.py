@@ -25,7 +25,7 @@ from telethon.errors import (
 @Client.on_message(filters.private & ~filters.forwarded & filters.command("generate"))
 async def main(_, msg):
     await msg.reply(
-        "**مـرحبـًا بـك عزيـزي مـرة أخـرى يرجـى اختيـار الجلسـة المطلوبـة إذا كنـت تريـد تيرمكـس فاختـر تيرمكـس أمـا إذا كنـت تريـد بايروجـرام فاختـر بايروجـرام 🖥️**",
+        "**- اختـر الجلسـة المطلوبـة إذا كـان رقمـك حقيقـي اخـتر تيرمـكس أما إذا كـان وهـمي اختـر بايروجـرام ⌬ ...**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
