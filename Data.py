@@ -6,7 +6,7 @@ class Data:
                    InlineKeyboardButton(text="- بـدء استخـراج الجلسـة .", callback_data="generate")
                 ],
                 [
-                    InlineKeyboardButton("قنـاة السـورس", url="https://t.me/FTTUTY"),
+                    InlineKeyboardButton("قنـاة السـورس", url="https://t.me/Tepthon"),
                 ]
 
     START = """
