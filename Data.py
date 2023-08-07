@@ -16,6 +16,7 @@ class Data:
         [InlineKeyboardButton("بـدء انشـاء جلسـة البـوت", callback_data="generate")],
         
         [
+        InlineKeyboardButton(
             "قنـاة السـورس", url="https://t.me/Tepthon"
         ],
         
