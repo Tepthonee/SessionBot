@@ -12,7 +12,7 @@ async def start(bot: Client, msg: Message):
     me2 = (await bot.get_me()).mention
     await bot.send_message(
         chat_id=msg.chat.id,
-text=f"""**⎆ مـرحبـًا** {msg.from_user.mention},
+text=f"""**⎆ Hey** {msg.from_user.mention},
 **⎆ اضغـط عـلى بـدء استخـراج الجلسـة لبـدء الاستـخراج**
 **⎆ أنـا بوت استـخراج كـود تيرمكـس وبايروجـرام لـ تنصيـب @Tepthon**
 **⎆ هـذا الكـود خـطير جدًا لا تشاركـه لأحد .**
