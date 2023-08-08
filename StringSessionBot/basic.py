@@ -9,7 +9,7 @@ def filter(cmd: str):
 
 # Start Message
 @Client.on_message(filter("start"))
-async def Data(bot: Client, msg: Message):
+async def start(bot: Client, msg: Message):
     user = await bot.get_me()
     mention = user.mention
     await bot.send_message(
