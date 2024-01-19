@@ -17,15 +17,12 @@ async def start(bot: Client, msg: Message):
 **⎆ اضغـط عـلى بـدء استخـراج الجلسـة لبـدء الاستـخراج**
 **⎆ أنـا بوت استـخراج كـود تيرمكـس وبايروجـرام لـ تنصيـب @Tepthon**
 **⎆ هـذا الكـود خـطير جدًا لا تشاركـه لأحد .**
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(text="- بـدء استخـراج الجلسـة .", callback_data="generate")
+         reply_markup=InlineKeyboardMarkup(
+            (
+                    InlineKeyboardButton(text="- بـدء استـخراج الجلسـة .", callback_data="generate")
                 ],
-                [
-                    InlineKeyboardButton("- قنـاة السـورس .", url="https://t.me/Tepthon"),
-                    InlineKeyboardButton("- المطـور .", user_id=OWNER_ID)
-                ]
+                    InlineKeyboardButton("- قنـاة السـورس", url="https://t.me/Tepthon"),
+                    InlineKeyboardButton("- المطـور", url="https://t.me/PPF22")
             ]
         ),
         disable_web_page_preview=True,
